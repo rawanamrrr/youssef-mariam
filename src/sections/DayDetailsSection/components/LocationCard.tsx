@@ -1,4 +1,4 @@
-import { Clock, MapPin } from "lucide-react";
+import { Clock, MapPin, Wallet } from "lucide-react";
 import { useLanguage } from "@/i18n";
 
 export const LocationCard = () => {
@@ -12,9 +12,15 @@ export const LocationCard = () => {
       <h3 className="mb-2 text-2xl leading-8 text-[#3b3c40]">{t("loc.title")}</h3>
       <p className="mb-1 text-lg leading-7 text-[#3b3c40]">{t("venue.name")}</p>
       <p className="mb-2 text-sm leading-6 text-[#3b3c40]/80">{t("venue.address")}</p>
-      <p className="mb-5 flex items-center justify-center gap-2 text-sm text-[#3b3c40]/80">
+      <p className="mb-1 flex items-center justify-center gap-2 text-sm text-[#3b3c40]/80">
         <Clock size={14} />
         <span>{t("loc.hours")}</span>
+      </p>
+      <p className="mb-5 flex items-center justify-center gap-2 text-sm text-[#3b3c40]/80">
+        <Wallet size={14} />
+        <span>
+          {t("loc.minCharge")} <span className="lining-nums">1000</span>
+        </span>
       </p>
       <iframe
         title="Vintage Bar"
